@@ -256,10 +256,10 @@ with pd.option_context("display.max_rows", 4, "display.max_columns", 50):
 # Data Pre-processing <a name="preprocess"></a>
 
 **Experiment:**
-* *Goal:* To build an interpretable model, I chose the family of Linear Models, which produces a mathematical equation and is computationally efficient..
+* *Model Selection:* In order to build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors, out of which I selected the family of Linear Models to explore further, as it can be summarized with an equation, apply statistical tests, and is computationally efficient.
 
 
-* *Feature Engineering:* To gain more insights from the dataset I developed the following features.
+* *Feature Engineering:* To extract insights for the model, I developed the following features from features available in the dataset
     * Discount Price = (retail_price) - (price)
     * Discount % = (discount)/(price) x 100
     * Markup % = (retail_price - price)/(price) x 100
