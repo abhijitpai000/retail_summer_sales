@@ -1,14 +1,14 @@
 # Final Report: 
-# E-commerce Summer Sales: How well a product likely to sell.
+# E-commerce Summer Sales: How well a product is likely to sell.
 
-**Overview :**
+### Overview:
 
 Developed an Interpretable ML model to understand how well a product published on the E-Commerce platform Wish is going to sell. In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
 
-**Evaluation Metrics:** Mean absolute error and R-Squared score.
+**Evaluation Metrics used:** Mean absolute error and R-Squared
 
 
-## Findings:
+### Findings:
 
 It is observed that out of the 10 features, products marked rating 3 and 5 have a significant positive impact on sales, followed by merchants who used ad boosts, their total rating count, discount percent on the product, with a retail price of the product having a significant negative impact.
 
@@ -24,13 +24,13 @@ It is observed that out of the 10 features, products marked rating 3 and 5 have 
 
 **Relative Weights :**
 
-<img src="https://github.com/abhijitpai000/retail_summer_sales/tree/master/report/fw.png"/>
+<img src="https://github.com/abhijitpai000/retail_summer_sales/blob/master/report/fw.png" />
 
 
 
-**Data Source:**
+### Data Source:
 
-I used [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-in-ecommerce-wish) data.
+I used [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-in-ecommerce-wish) data for this analysis.
 
 
 ## Analysis Walk-through
@@ -516,7 +516,7 @@ np.mean(cv_results['test_r2']), np.mean(-cv_results['test_neg_mean_absolute_erro
 
 
 
-# Test Prediction <a name="test"></a>
+# Test Prediction <a name="predict"></a>
 
 **test_model()**
 * Predicts on the test_clean dataset.
