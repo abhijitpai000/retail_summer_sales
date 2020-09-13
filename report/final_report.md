@@ -40,17 +40,10 @@ Based on the model, It is observed that out of the 10 features, products marked 
 # Setting Git Clone Path as Current Working Directory (cwd).
 
 import os
-FILE_PATH = r'E:\Data Science Portfolio\Git Projects\retail_summer_sales'
+FILE_PATH = "Git/Clone/Path"
 os.chdir(FILE_PATH)   # Changes cwd
 os.getcwd()   # Prints cwd
 ```
-
-
-
-
-    'E:\\Data Science Portfolio\\Git Projects\\retail_summer_sales'
-
-
 
 # Introduction <a name="introduction"></a>
 
