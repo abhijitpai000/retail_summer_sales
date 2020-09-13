@@ -64,4 +64,4 @@ This repository has been tested on Python 3.7.6.
 `pip install -r requirements.txt`
 
 **Note**
-For make_dataset() to work, please place the raw.csv in the 'datasets' directory.
+For make_dataset() to work, please place the raw data (.csv from data source) in the 'datasets' directory.
