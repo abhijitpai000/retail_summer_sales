@@ -1,17 +1,18 @@
-# E-commerce Summer Clothes Sales
+# Final Report: 
+# E-commerce Summer Sales: How well a product likely to sell.
 
 **Overview :**
 
 Developed an Interpretable ML model to understand how well a product published on the E-Commerce platform Wish is going to sell. In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
 
-**Findings:**
+**Evaluation Metrics:** Mean absolute error and R-Squared score.
 
 
-Based on the model, It is observed that out of the 10 features, products marked rating 3 and 5 have a significant positive impact on sales, followed by merchants who used ad boosts, their total rating count, discount percent on the product, with a retail price of the product having a significant negative impact.
+## Findings:
+
+It is observed that out of the 10 features, products marked rating 3 and 5 have a significant positive impact on sales, followed by merchants who used ad boosts, their total rating count, discount percent on the product, with a retail price of the product having a significant negative impact.
 
 **Sales Estimator Equation:**
-
-**Evaluation Metrics:** Mean absolute error and R-Squared score.
 
 **units_sold** = *(uses_ad_boosts x 642.80) + (rating_three_count x 15.06) + (rating_five_count x 3.33) +
                  (merchant_rating_count x 0.003) + (product_id x -0.850) + (discount x -1.73) +
@@ -23,7 +24,13 @@ Based on the model, It is observed that out of the 10 features, products marked 
 
 **Relative Weights :**
 
+<img src="https://github.com/abhijitpai000/retail_summer_sales/tree/master/report/fw.png"/>
 
+
+
+**Data Source:**
+
+I used [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-in-ecommerce-wish) data.
 
 
 ## Analysis Walk-through
@@ -98,19 +105,7 @@ with pd.option_context("display.max_rows", 4, "display.max_columns", 50):
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -317,19 +312,6 @@ train_clean.head(4)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -433,19 +415,6 @@ cv_results
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
