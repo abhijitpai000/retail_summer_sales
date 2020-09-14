@@ -43,7 +43,7 @@ This repository has been tested on Python 3.7.6.
 
 1. Cloning the repository:
 
-`git clone https://github.com/abhijitpai000/customer_segmentation_rfm.git`
+`git clone https://github.com/abhijitpai000/retail_summer_sales.git`
 
 2. Navigate to the git clone repository.
 
