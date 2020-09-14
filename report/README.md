@@ -44,7 +44,7 @@ I used [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-i
 
 # Experiment: <a name="experiment"></a>
 
-* *Model Selection:* In order to build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors, out of which I selected the family of Linear Models to explore further, as it can be summarized with an equation, apply statistical tests, and is computationally efficient.
+* *Model Selection:* In order to build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors. Out of which I selected the family of Linear Models to explore further, as the model produces an equation to explain predictions, statistical tests can be applied, and is computationally efficient.
 
 
 * *Feature Engineering:* To extract insights for the model, I developed the following features from features available in the dataset
