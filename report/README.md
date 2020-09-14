@@ -33,16 +33,40 @@ It is observed that out of the 10 features, products marked rating 3 and 5 have 
 I used [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-in-ecommerce-wish) data for this analysis.
 
 
-## Analysis Walk-through
+# Analysis Walk-through
 
 **Table of Contents**
-
-1. [Introduction](#introduction)
+1. [Experiment](#experiment)
+1. [Package Introduction](#introduction)
 2. [Preprocess](#preprocess)
 3. [Training](#train)
 4. [Prediction](#predict)
 
+# Experiment: <a name="experiment"></a>
 
+* *Model Selection:* In order to build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors, out of which I selected the family of Linear Models to explore further, as it can be summarized with an equation, apply statistical tests, and is computationally efficient.
+
+
+* *Feature Engineering:* To extract insights for the model, I developed the following features from features available in the dataset
+    * Discount Price = (retail_price) - (price)
+    * Discount % = (discount)/(price) x 100
+    * Markup % = (retail_price - price)/(price) x 100
+    * Average Merchant Rating
+    * Average Product Rating 
+    * Number of Tags marked by each merchant on the product.
+    
+    
+* *Feature Selection:* Using techniques such as L1 regularization, Drop Feature Selection, Residual Plot Analysis, and Correlations, I derived the following 10 significant features out of 48 (includes engineered) which are impacting the "units_sold" target.
+    * 'rating_three_count'
+    * 'rating_five_count'
+    * 'merchant_rating_count'
+    * 'uses_ad_boosts'
+    * 'discount'
+    * 'discount_percent'
+    * 'product_variation_size_id'
+    * 'badge_fast_shipping'
+    * 'product_id'
+    * 'retail_price'
 ```python
 # Setting Git Clone Path as Current Working Directory (cwd).
 
@@ -52,7 +76,7 @@ os.chdir(FILE_PATH)   # Changes cwd
 os.getcwd()   # Prints cwd
 ```
 
-# Introduction <a name="introduction"></a>
+# Package Introduction <a name="introduction"></a>
 
 **Codebase Structure** 'src' directory.
 
@@ -255,30 +279,7 @@ with pd.option_context("display.max_rows", 4, "display.max_columns", 50):
 
 # Data Pre-processing <a name="preprocess"></a>
 
-**Experiment:**
-* *Model Selection:* In order to build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors, out of which I selected the family of Linear Models to explore further, as it can be summarized with an equation, apply statistical tests, and is computationally efficient.
 
-
-* *Feature Engineering:* To extract insights for the model, I developed the following features from features available in the dataset
-    * Discount Price = (retail_price) - (price)
-    * Discount % = (discount)/(price) x 100
-    * Markup % = (retail_price - price)/(price) x 100
-    * Average Merchant Rating
-    * Average Product Rating 
-    * Number of Tags marked by each merchant on the product.
-    
-    
-* *Feature Selection:* Using techniques such as L1 regularization, Drop Feature Selection, Residual Plot Analysis, and Correlations, I derived the following 10 significant features out of 48 (includes engineered) which are impacting the "units_sold" target.
-    * 'rating_three_count'
-    * 'rating_five_count'
-    * 'merchant_rating_count'
-    * 'uses_ad_boosts'
-    * 'discount'
-    * 'discount_percent'
-    * 'product_variation_size_id'
-    * 'badge_fast_shipping'
-    * 'product_id'
-    * 'retail_price'
     
 **make_dataset()** Based on the insights gained from experiment, make dataset will perform following actions.
 1. Feature Engineering
