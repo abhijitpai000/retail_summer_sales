@@ -47,17 +47,19 @@ This repository has been tested on Python 3.7.6.
 
 2. Navigate to the git clone repository.
 
-`cd customer_segmentation_rfm`
+`cd retail_summer_sales`
+
+3. Download raw data from the data source link and place in "datasets" directory
 
 3. Install [virtualenv](https://pypi.org/project/virtualenv/)
 
 `pip install virtualenv`
 
-`virtualenv rfm`
+`virtualenv summer_sales`
 
 4. Activate it by running:
 
-`rfm/Scripts/activate`
+`summer_sales/Scripts/activate`
 
 5. Install project requirements by using:
 
