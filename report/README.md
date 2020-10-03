@@ -28,9 +28,10 @@ It is observed that out of the 10 features, products marked rating 3 and 5 have 
 
 
 
-### Data Source:
+### About Summer Sales Data Set:
+This dataset contains sales data of products published on E-Commerce platform Wish.
 
-I used [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-in-ecommerce-wish) data for this analysis.
+**Source** [Summer Sales](https://www.kaggle.com/jmmvutu/summer-products-and-sales-in-ecommerce-wish)
 
 
 # Analysis Walk-through
@@ -110,12 +111,16 @@ import joblib
 raw = pd.read_csv("datasets/raw.csv")
 
 raw.shape
+
+"""
+    (1573, 43)
+"""
 ```
 
 
 
 
-    (1573, 43)
+
 
 
 
@@ -295,12 +300,16 @@ with pd.option_context("display.max_rows", 4, "display.max_columns", 50):
 train_clean, test_clean = make_dataset(raw_file_name="raw.csv")
 
 train_clean.shape, test_clean.shape   # Includes target column.
+
+"""
+    ((1179, 11), (394, 11))
+"""
 ```
 
 
 
 
-    ((1179, 11), (394, 11))
+
 
 
 
@@ -508,12 +517,16 @@ cv_results
 # Mean R2 and Mean MAE (absolute_error)
 
 np.mean(cv_results['test_r2']), np.mean(-cv_results['test_neg_mean_absolute_error'])
+
+"""
+    (0.7676600419460257, 1846.0977368351098)
+"""
 ```
 
 
 
 
-    (0.7676600419460257, 1846.0977368351098)
+
 
 
 
@@ -533,12 +546,16 @@ test_r2, test_mae = test_model()
 # TEST SCORES. 
 
 test_mae, test_r2   # TRAINING SCORES: (0.7676600419460257, 1846.0977368351098)
+
+"""
+    (0.8535742464800788, 2015.8739238541998)
+"""
 ```
 
 
 
 
-    (0.8535742464800788, 2015.8739238541998)
+
 
 
 
