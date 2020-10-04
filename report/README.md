@@ -3,7 +3,7 @@
 
 ### Overview:
 
-Developed an Interpretable ML model to understand how well a product published on the E-Commerce platform Wish is going to sell. In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
+Understanding how well a product published on the E-Commerce platform Wish is going to sell using ML. In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
 
 **Evaluation Metrics used:** Mean absolute error and R-Squared
 
