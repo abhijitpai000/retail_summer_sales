@@ -1,8 +1,8 @@
 # E-commerce Summer Sales: How well a product is likely to sell.
+Understanding how well a product that is published on the E-Commerce platform Wish is going to sell using Machine Learning.
 
 ### Overview:
-
-Understanding how well a product published on the E-Commerce platform Wish is going to sell using ML. In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
+In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
 
 **Evaluation Metrics used:** Mean absolute error and R-Squared
 
