@@ -1,9 +1,9 @@
 # Final Report: 
 # E-commerce Summer Sales: How well a product is likely to sell.
+Understanding how well a product published on the E-Commerce platform Wish is going to sell using ML.
 
 ### Overview:
-
-Understanding how well a product published on the E-Commerce platform Wish is going to sell using ML. In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
+In this study, I extracted 10 significant features out of 43 provided in the dataset and trained a Linear Regression model that predicts "units_sold" of products. 
 
 **Evaluation Metrics used:** Mean absolute error and R-Squared
 
@@ -45,10 +45,9 @@ This dataset contains sales data of products published on E-Commerce platform Wi
 
 # Experiment: <a name="experiment"></a>
 
-* *Model Selection:* In order to build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors. Out of which I selected the family of Linear Models to explore further, as the model produces an equation to explain predictions, statistical tests can be applied, and is computationally efficient.
+* *Model Selection:* To build an interpretable model, I experimented with Linear Models, Decision Trees, and K-Nearest Neighbors. Out of which I selected the family of Linear Models to explore further, as this model produces an equation to explain predictions, statistical tests can be applied and is computationally efficient.
 
-
-* *Feature Engineering:* To extract insights for the model, I developed the following features from features available in the dataset
+* *Feature Engineering:* To extract more insights from the data, calculated the following additional features.
     * Discount Price = (retail_price) - (price)
     * Discount % = (discount)/(price) x 100
     * Markup % = (retail_price - price)/(price) x 100
@@ -405,7 +404,7 @@ train_clean.head(4)
 # Train Model <a name="train"></a>
 
 **train_model()**
-* Fits a fine-tuned Linear Regression model to train_clean dataset.
+* Fits a Linear Regression model to train_clean dataset.
 * Performs 10 folds Cross-validation.
 * Returns CV results
 
